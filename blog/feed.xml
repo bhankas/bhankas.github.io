@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+     xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+     xmlns:georss="http://www.georss.org/georss"
+     xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+     xmlns:media="http://search.yahoo.com/mrss/">
+  <channel>
+    <title>bhankas</title>
+    <atom:link
+      href="https://bhankas.github.io/feed.xml"
+      rel="self" type="application/rss+xml" />
+    <link>https://bhankas.github.io/</link>
+    <description><![CDATA[]]></description>
+    <language>en</language>
+    <pubDate>Wed, 01 Sep 2021 00:00:00 +0530</pubDate>
+    <lastBuildDate>Mon, 04 Apr 2022 17:05:10 +0530</lastBuildDate>
+    <generator>weblorg 0.1.0 (https://emacs.love/weblorg)</generator>
+    <webMaster>bhankas</webMaster>
+    <image>
+      <url>https://bhankas.github.io/media/img/8bitme.png</url>
+      <title>Blog Author</title>
+      <link>https://bhankas.github.io/</link>
+    </image>
+
+    
+    <item>
+      <title>Welcome to Weblorg</title>
+      <link>https://bhankas.github.io/blog/welcome-to-weblorg.html</link>
+      <author>author@mail.com (Blog Author)</author>
+      <guid isPermaLink="false">https://bhankas.github.io/blog/welcome-to-weblorg.html</guid>
+      
+        <pubDate>Wed, 01 Sep 2021 00:00:00 +0530</pubDate>
+      
+      <description><![CDATA[
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro">Intro</h2>
+<div class="outline-text-2">
+<p>
+Weblorg is a Static HTML Website Generator. It's built with Emacs
+Lisp and takes advantage of the powers of Org-Mode as the source
+format, and makes it easy to extend and customize the structure and
+the theme of the generated website.
+</p>
+
+<div class="note" id="org16f3211">
+<p>
+It's easy to run Weblorg from a CI or from any other automated
+environment with emacs &#x2013;script publish.el from the root of your
+website.
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-templating" class="outline-2">
+<h2 id="templating">Templating</h2>
+<div class="outline-text-2">
+<p>
+To make it more natural for people that have used other tools for
+generating websites, Weblorg leverages templatel, a library that
+provides a familiar syntax for stitching reusable templates together
+for creating websites. e.g.:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-jinja2">&lt;ul&gt;
+  {% for post in posts %}
+    &lt;li&gt;
+      &lt;a href="{{ url_for("posts", slug=post.slug) }}"&gt;
+	{{ post.title }}
+      &lt;/a&gt;
+    &lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org-mode" class="outline-2">
+<h2 id="org-mode">Org-Mode</h2>
+<div class="outline-text-2">
+<p>
+You can format your posts using text-based annotations, very
+similarly to markdown. Although they're similar in concept, Org-Mode
+has it's own syntax. Check out the basics:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Markup</th>
+<th scope="col" class="org-left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>*bold*</code></td>
+<td class="org-left"><b>bold</b></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>/italic/</code></td>
+<td class="org-left"><i>italic</i></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>_underline_</code></td>
+<td class="org-left"><span class="underline">underline</span></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>~code~</code></td>
+<td class="org-left"><code>code</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>=verbatim=</code></td>
+<td class="org-left"><code>verbatim</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[https://orgmode.org][Link]]</code></td>
+<td class="org-left"><a href="https://orgmode.org">Link</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Outlines, automatic generation of Table of Contents and many more
+Org-Mode features are available. Make sure you take a look at their
+extensive documentation to learn more about it.
+</p>
+</div>
+</div>
+]]></description>
+    </item>
+    
+
+  </channel>
+</rss>

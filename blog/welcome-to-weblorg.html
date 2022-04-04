@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="utf-8">
+    <title>
+      bhankas
+      
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="bhankas" />
+    <meta name="description" content="bhankas" />
+    
+    
+  <meta property="og:title" content="Welcome to Weblorg">
+  <meta property="og:url" content="https://bhankas.github.io/blog/welcome-to-weblorg.html">
+  
+  
+  <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="stylesheet" href="https://bhankas.github.io/static/style.css" type="text/css" />
+    
+  </head>
+  <body>
+    
+    
+      <header>
+        <h1>
+          <a href="https://bhankas.github.io/">
+            bhankas
+          </a>
+        </h1>
+        <a href="#main" class="visually-hidden">jump to main content</a>
+        <nav>
+          <ul class="menu">
+            <li><a href="https://bhankas.github.io/about">about</a></li>
+            <li><a href="https://bhankas.github.io/">blog</a></li>
+          </ul>
+        </nav>
+      </header>
+    
+
+    
+    <main id="main">
+      
+  <article class="post">
+    <h1 class="post__title">
+      Welcome to Weblorg
+    </h1>
+    <section class="post__meta">
+      
+        Sep 01, 2021
+      
+    </section>
+    <section>
+      
+<div id="outline-container-intro" class="outline-2">
+<h2 id="intro">Intro</h2>
+<div class="outline-text-2">
+<p>
+Weblorg is a Static HTML Website Generator. It's built with Emacs
+Lisp and takes advantage of the powers of Org-Mode as the source
+format, and makes it easy to extend and customize the structure and
+the theme of the generated website.
+</p>
+
+<div class="note" id="org9584571">
+<p>
+It's easy to run Weblorg from a CI or from any other automated
+environment with emacs &#x2013;script publish.el from the root of your
+website.
+</p>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-templating" class="outline-2">
+<h2 id="templating">Templating</h2>
+<div class="outline-text-2">
+<p>
+To make it more natural for people that have used other tools for
+generating websites, Weblorg leverages templatel, a library that
+provides a familiar syntax for stitching reusable templates together
+for creating websites. e.g.:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-jinja2">&lt;ul&gt;
+  {% for post in posts %}
+    &lt;li&gt;
+      &lt;a href="{{ url_for("posts", slug=post.slug) }}"&gt;
+	{{ post.title }}
+      &lt;/a&gt;
+    &lt;/li&gt;
+  {% endfor %}
+&lt;/ul&gt;
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org-mode" class="outline-2">
+<h2 id="org-mode">Org-Mode</h2>
+<div class="outline-text-2">
+<p>
+You can format your posts using text-based annotations, very
+similarly to markdown. Although they're similar in concept, Org-Mode
+has it's own syntax. Check out the basics:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Markup</th>
+<th scope="col" class="org-left">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><code>*bold*</code></td>
+<td class="org-left"><b>bold</b></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>/italic/</code></td>
+<td class="org-left"><i>italic</i></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>_underline_</code></td>
+<td class="org-left"><span class="underline">underline</span></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>~code~</code></td>
+<td class="org-left"><code>code</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>=verbatim=</code></td>
+<td class="org-left"><code>verbatim</code></td>
+</tr>
+
+<tr>
+<td class="org-left"><code>[[https://orgmode.org][Link]]</code></td>
+<td class="org-left"><a href="https://orgmode.org">Link</a></td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Outlines, automatic generation of Table of Contents and many more
+Org-Mode features are available. Make sure you take a look at their
+extensive documentation to learn more about it.
+</p>
+</div>
+</div>
+
+    </section>
+  </article>
+
+    </main>
+
+    
+    
+      <footer>
+        Made with &#x2665; and&nbsp;
+        <a href="https://emacs.love/weblorg" target="_blank">
+          weblorg
+        </a>
+      </footer>
+    
+
+  </body>
+</html>

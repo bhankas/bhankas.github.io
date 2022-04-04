@@ -1,0 +1,70 @@
+{# layout.html --- Base template for all other templates -*- Mode: Jinja2; -*-
+
+The blocks available in this file are:
+
+* title: What will show within the HTML <title> tag.
+* description: What will show within the HTML <meta> description tag.
+* nav: Navigation bar with Links, a default is provided
+* body: Main content which starts empty
+* footer: Bottom links, default is provided
+
+#}
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>bhankas &mdash; {% block title %}Home{% endblock %}</title>
+    <meta name="description" content="{% block description %}{% endblock %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/media/css/main.css">
+    <link rel="icon" type="image/png" href="/media/img/8bitme.png">
+    <link rel="alternate" type="application/rss+xml" href="/blog/feed.xml">
+  </head>
+  <body>
+    {% block nav %}
+      <div class="social">
+        <div class="container">
+          <ul class="badges">
+            <li>
+              <a href="mailto:bhankas@bhankas.org" alt="Email">
+                <span class="fa fa-envelope-o"></span>EMail
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/bhankas" target="_blank" alt="Github">
+                <span class="fa fa-github-alt"></span>Github
+              </a>
+            </li>
+            <li>
+              <a href="/blog/rss.xml" alt="RSS">
+                <span class="fa fa-rss"></span>RSS
+              </a>
+            </li>
+          </ul>
+
+          <a href="/">
+            <img class="avatar" type="image/svg+xml" src="/media/img/8bitme.svg" alt="Me in 8bit" />
+          </a>
+        </div>
+      </div>
+    {% endblock %}
+
+    <div class="post">
+      <div class="container">
+        {% block body %}{% endblock %}
+      </div>
+    </div>
+
+    <div class="footer">
+      {% block footer %}
+        <div class="bg">
+          <div class="container">
+            &#169; bhankas &mdash; All written content on this
+            website reflects my personal opinion and it's available
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </div>
+        </div>
+      {% endblock %}
+    </div>
+  </body>
+</html>
